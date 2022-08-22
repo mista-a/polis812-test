@@ -1,8 +1,8 @@
 <template>
   <div class="user">
     <UserNav />
-    <AlbumsList v-show="this.$route.query.page === 'список альбомов'" />
-    <PostsList v-show="this.$route.query.page === 'список постов'" />
+    <AlbumsList v-if="this.$route.query.page === 'список альбомов'" />
+    <PostsList v-else />
   </div>
 </template>
 
